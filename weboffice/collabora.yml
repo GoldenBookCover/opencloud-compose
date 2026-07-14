@@ -54,7 +54,7 @@ services:
       - /usr/share/fonts/truetype:/opt/cool/systemplate/usr/share/fonts/truetype/more:ro
     logging:
       driver: ${LOG_DRIVER:-local}
-    restart: always
+    restart: unless-stopped
     entrypoint: [ '/bin/bash', '-c' ]
     command: [ 'coolconfig generate-proof-key && /start-collabora-online.sh' ]
     healthcheck:

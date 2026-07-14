@@ -38,3 +38,8 @@ additional_policies:
 #        skip_x_access_token: true
 #        additional_headers:
 #          - X-Script-Name: /caldav
+
+role_quotas:
+  'd7beeea8-8ff4-406b-8fb6-ab2dd81e6b11': 53687091200
+  '2aadd357-682c-406b-8874-293091995fdd': 107374182400
+

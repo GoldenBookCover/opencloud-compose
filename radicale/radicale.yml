@@ -11,7 +11,7 @@ services:
       opencloud-net:
     logging:
       driver: ${LOG_DRIVER:-local}
-    restart: always
+    restart: unless-stopped
     volumes:
       - ./config/radicale/config:/etc/radicale/config
       - ${RADICALE_DATA_DIR:-radicale-data}:/var/lib/radicale

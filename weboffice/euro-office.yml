@@ -38,7 +38,7 @@ services:
       - /usr/share/fonts/truetype:/usr/share/fonts/truetype/more:ro
     logging:
       driver: ${LOG_DRIVER:-local}
-    restart: always
+    restart: unless-stopped
     healthcheck:
       test:
         [

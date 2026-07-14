@@ -28,7 +28,7 @@ services:
       - clamav-db:/var/lib/clamav
     logging:
       driver: ${LOG_DRIVER:-local}
-    restart: always
+    restart: unless-stopped
     healthcheck:
       test: sh -c "[ -S /tmp/clamd.sock ]"
       timeout: 1s

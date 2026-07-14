@@ -51,4 +51,4 @@ services:
       - "traefik.http.routers.traefik.service=api@internal"
     logging:
       driver: ${LOG_DRIVER:-local}
-    restart: always
+    restart: unless-stopped

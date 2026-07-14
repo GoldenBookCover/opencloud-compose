@@ -21,4 +21,4 @@ services:
       - "traefik.http.services.ldap-manager.loadbalancer.server.port=8080"
     logging:
       driver: ${LOG_DRIVER:-local}
-    restart: always
+    restart: unless-stopped
